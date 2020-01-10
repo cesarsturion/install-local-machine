@@ -17,12 +17,14 @@ fi
 echo "Atualização de pacotes feita com sucesso"
 
 # instalacao de pacotes
-if ! apt-get install telnet net-tools curl tilix code -y
+if ! apt-get install telnet net-tools curl tilix vim -y
 then
     echo "Não foi possível instalar o pacote"
     exit 1
 fi
 echo "Instalação finalizada"
+
+snap install code --classic
 
 # instalando o docker
 if ! curl -fsSL https://get.docker.com | bash -
@@ -35,3 +37,4 @@ echo "Instalação do Docker finalizada"
 # instalacao do chrome
 wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
 sudo dpkg -i google-chrome-stable_current_amd64.deb
+rm google-chrome-stable_current_amd64.deb

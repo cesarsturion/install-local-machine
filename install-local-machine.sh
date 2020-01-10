@@ -24,7 +24,10 @@ then
 fi
 echo "Instalação finalizada"
 
-snap install code --classic
+if ! snap install code --classic
+then
+    echo "Não foi possível instalar o vscode"
+fi
 
 # instalando o docker
 if ! curl -fsSL https://get.docker.com | bash -

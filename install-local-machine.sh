@@ -17,7 +17,7 @@ fi
 echo "Atualização de pacotes feita com sucesso"
 
 # instalacao de pacotes
-if ! apt-get install -y telnet net-tools curl tilix vim vlc virtualbox zsh
+if ! apt-get install -y telnet net-tools curl tilix vim vlc zsh obs-studio
 then
     echo "Não foi possível instalar o pacote"
     exit 1
